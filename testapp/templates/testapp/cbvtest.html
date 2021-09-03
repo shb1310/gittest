@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Cbv Test</title>
+</head>
+<body>
+<form method = "post">
+{% csrf_token %}
+	<div><h2>Mot input</h2></div><br>
+	<input type="text" id="name" name="name" value><br>
+	<input type="text" id="content" name="content" value><br>
+	<button name="btt">press me</button>
+</form>
+<div>
+	<h2>Mot Information</h2>
+	<h4>title: {{ name }}</h4>
+	<h4>content: {{ content }}</h4>
+</div>
+</body>
+</html>

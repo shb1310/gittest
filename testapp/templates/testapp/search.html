@@ -1,0 +1,20 @@
+<h2>DB LIST</h2>
+<body>
+<form method = "post">
+{% csrf_token %}
+	<div><h2>Mot input</h2></div><br>
+	<input type="text" id="search" name="search" value><br>
+	<button name="btt">search</button>
+</form>
+</body>
+{% if Mot %}
+<ul>
+  {% for data in Mot %}
+  <li>{{ data.id }}</li>
+  <li>{{ data.name }}</li>
+  <li>{{ data.content }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>EMPTY LIST</p>
+{% endif %}
